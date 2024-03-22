@@ -1,6 +1,6 @@
 package com.green.day6.ch3;
 
-public class OperatiorEx32 {
+public class OperatorEx32 {
     public static void main(String[] args) {
         int x,y,z;
         int absX, absY,absZ;

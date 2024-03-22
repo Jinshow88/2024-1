@@ -1,6 +1,6 @@
 package com.green.day6.ch3;
 
-public class OperatiorEx19 {
+public class OperatorEx19 {
     public static void main(String[] args) {
         int x = 10;
         int y = 8;

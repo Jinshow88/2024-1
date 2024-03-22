@@ -18,7 +18,7 @@ public class FlowEx1 {
         //가나의 혈액형은 B형 입니다.
         //가나의 혈액형은 A형 입니다.
 
-        System.out.printf("%s의 혈액형은 %s형 입니다.\n", name, bloodType);
+        System.out.printf("%s의 혈액형은 %c형 입니다.\n", name, bloodType);
 
 
     }

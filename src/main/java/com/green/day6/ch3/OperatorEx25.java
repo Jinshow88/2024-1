@@ -2,7 +2,7 @@ package com.green.day6.ch3;
 
 import java.util.Scanner;
 
-public class OperatiorEx25 {
+public class OperatorEx25 {
     public static void main(String[] args){
         String str = "abcdefg";
 //        System.out.println(str.charAt(0));

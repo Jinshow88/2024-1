@@ -12,5 +12,11 @@ public class PrintFormat2 {
 
         System.out.printf("저의 이름은 %s 입니다. 나이는 %s살, 키는 %scm, 혈액형은%s형\n"
                 , name,age, height, bloodType, isSingle ? "싱글립니다." : "싱글이 아닙니다.");
+
+
+
+
+
+
     }
 }

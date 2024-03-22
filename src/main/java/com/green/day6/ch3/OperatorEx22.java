@@ -1,6 +1,6 @@
 package com.green.day6.ch3;
 
-public class OperatiorEx22 {
+public class OperatorEx22 {
     public static void main(String[] args){
         float f = 0.1f;
         double d = 0.1;
