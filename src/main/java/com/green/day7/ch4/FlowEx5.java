@@ -12,8 +12,8 @@ public class FlowEx5 {
         if(score < 0 || score >=100){
             System.out.println("잘못된 점수 입니다.");
         }else {
-            char grade = 'D';
-            char symbol = '-';
+            char grade = 'C';
+            char symbol = '0';
             if (score >= 90) {
                 grade = 'A';
                 if(score >= 97){symbol = '+';}
@@ -41,7 +41,7 @@ public class FlowEx5 {
         symbol(+-0)저장할 문자 타입 선언해주세요.
         만약 점수가 90점 이상이면 grade에 A값을 저장하고
         만약 점수가 80점 이상이면 grade에 B값을 저장하고
-        나머지는 C학점 오로지 학점
+        나머지는 C0학점 오로지 학점
         1점대가 0~2 -
                3~6 0
                7~9 +
