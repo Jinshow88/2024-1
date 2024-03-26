@@ -7,7 +7,7 @@ public class FlowEx26r2 {
         int sum = 0;
         while (true){
             int result = sum + i + 1;
-            if (result > 200) {
+            if (result > 100) {
                 break;
             }
             sum +=++i;
