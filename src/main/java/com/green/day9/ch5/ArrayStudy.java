@@ -11,6 +11,7 @@ public class ArrayStudy {
         int[] numArr = new int[10];
         System.out.println("numArr[1]:" +numArr[1]);
         numArr[1] = 11;
+        numArr[3-1] = 12;
         System.out.println("numArr[1]:" +numArr[1]);
 
         int[] numArr2 = {10,20,30,40,50};
