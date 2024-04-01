@@ -98,7 +98,7 @@ class MyMethod {
 
     void checkOddEven(int n1) {
 
-
+//
         if (n1 % 2 == 0) {
             System.out.println("짝수입니다.");
         } else {
