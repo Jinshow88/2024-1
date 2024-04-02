@@ -1,7 +1,7 @@
 package com.green.day13.ch6;
 
 public class PrimitiveRefEx {
-    public static void main(String[]args){
+    public static void main(String[] args) {
         int num = 10;
 
 
@@ -12,9 +12,10 @@ public class PrimitiveRefEx {
         System.out.println("num : " + num);
 
         changeNum(nb);
-        System.out.println("nb.num : " +nb.num);
+        System.out.println("nb.num : " + nb.num);
     }
-    public static void changeNum(Numbox n){
+
+    public static void changeNum(Numbox n) {
 //        n = new Numbox();
         n.num = 100;
     }
@@ -28,6 +29,6 @@ public class PrimitiveRefEx {
 }
 
 
-class Numbox{
+class Numbox {
     int num;
 }

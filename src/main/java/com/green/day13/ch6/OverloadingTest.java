@@ -2,6 +2,8 @@ package com.green.day13.ch6;
 
 public class OverloadingTest {
     public static void main(String[] args) {
+        MyMath3 myMath3 = new MyMath3();
+        myMath3.add(1,2);
 
     }
 }
