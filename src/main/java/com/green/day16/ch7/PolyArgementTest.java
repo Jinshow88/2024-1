@@ -6,7 +6,7 @@ public class PolyArgementTest {
 //        System.out.println(p);
 //        Product p2 = new Product(500);
 //        System.out.println(p2);
-//
+
 //        p.getPrice();
 //        System.out.println(p.getPrice());
 //        p.getBonusPoint();
@@ -39,13 +39,14 @@ class Buyer {
 
     Buyer(int havrMoney){
         this.havrMoney = havrMoney;
+        System.out.printf("%s\n",havrMoney);
 
     }
 
     public void buy(Product product){
         this.havrMoney = havrMoney-product.getPrice();
         this.haveBonusPoint = haveBonusPoint +product.getBonusPoint();
-        System.out.printf("%s 를 구해하였습니다.", product.getPrice());
+        System.out.printf("%s남았습니다.%s포인트 쌓였습니다.(%s)\n", havrMoney,product.getBonusPoint(),product.getPrice());
     }
 
 //    void showMeTheMoney(){
@@ -57,7 +58,7 @@ class Buyer {
 
 class Computer extends Product {
     Computer() {
-        super(200);
+        super(100);
     }
 
     @Override
@@ -68,7 +69,7 @@ class Computer extends Product {
 
 class Tv extends Product {
     Tv() {
-        super(100);
+        super(200);
     }
     @Override
     public String toString() {
@@ -104,7 +105,7 @@ class Product {
 
 class Sofa extends Product {
     Sofa() {
-        super(80);
+        super(100);
     }
 
     @Override
