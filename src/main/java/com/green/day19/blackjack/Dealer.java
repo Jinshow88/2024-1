@@ -15,12 +15,12 @@ public class Dealer extends Gamer{
 
 }
 
-
-class DealerTest {
-    public static void main(String[]args){
-        Dealer dealer = new Dealer();
-        dealer.receiveCard(new Card("Heart","K"));
-        dealer.receiveCard(new Card("Spade","K"));
-        boolean answer = dealer.isMoreReceiveCard();
-    }
-}
+//
+//class DealerTest {
+//    public static void main(String[]args){
+//        Dealer dealer = new Dealer();
+//        dealer.receiveCard(new Card("Heart","K"));
+//        dealer.receiveCard(new Card("Spade","K"));
+//        boolean answer = dealer.isMoreReceiveCard();
+//    }
+//}

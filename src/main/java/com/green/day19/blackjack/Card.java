@@ -35,19 +35,19 @@ public class Card {
 
 }
 
-class CardTest{
-
-
-
-    public static void main(String[]args){
-        Card c = new Card("Spade","A");
-        //기본 생성자는 없어야함
-        String pattern = c.getPattern();
-        String denomination = c.getDenomination();
-        System.out.println(c);//Spdae(A)
-
-        int score = c.getPoint();
-
-
-    }
-}
+//class CardTest{
+//
+//
+//
+//    public static void main(String[]args){
+//        Card c = new Card("Spade","A");
+//        //기본 생성자는 없어야함
+//        String pattern = c.getPattern();
+//        String denomination = c.getDenomination();
+//        System.out.println(c);//Spdae(A)
+//
+//        int score = c.getPoint();
+//
+//
+//    }
+//}
