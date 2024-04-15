@@ -13,9 +13,9 @@ public class MemberDao {
     }
     public int insMember(MemberEntity entity){
         String sql = String.format("INSERT INTO member" +
-                "(mem_id, mem_ name, mem number, addr, phone1, phone2, height, debut_date)" +
+                "(mem_id, mem_name, mem_number, addr, phone1, phone2, height, debut_date)" +
                 "VALUES"+
-                "'%s','%s',%d,'%s','%s','%s',%d,'%s'"
+                "('%s','%s',%d,'%s','%s','%s',%d,'%s')"
                 ,entity.getMemId(),entity.getMemName(),entity.getMemNumber(),entity.getAddr(),
                 entity.getPhone1(), entity.getPhone2(), entity.getHeight(),entity.getDebutDate());
 
@@ -41,10 +41,6 @@ public class MemberDao {
 
         return result;
     }
-
-
-
-
 }
 
 class MemberDAOTest{

@@ -38,18 +38,36 @@ public class Myconnection {
     }
 
     public void close(Statement stat, Connection conn) {
-        if(stat !=null){
+        if (stat != null) {
             try {
                 stat.close();
-            }catch (SQLException e){
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
         close(conn);
     }
+
+
 }
+class MyConnextionTest {
+    public static void main(String[] args) {
+        Myconnection myconnection = new Myconnection();
+        Connection conn = null;
+        try {
+            conn = myconnection.getConn();
 
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } finally {
+            myconnection.close(conn);
+        }
+    }
+
+}
 
 
 

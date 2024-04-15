@@ -1,24 +1,7 @@
 package com.green.day22;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-
 public class MarketTest {
-    public static void main(String[] args){
-        Myconnection myconnection = new Myconnection();
-        Connection conn = null;
-        try {
-             conn = myconnection.getConn();
 
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        } finally {
-            myconnection.close(conn);
-        }
-    }
 }
 
 /*
