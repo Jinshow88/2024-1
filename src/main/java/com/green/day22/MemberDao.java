@@ -56,6 +56,36 @@ public class MemberDao {
         return execute(sql);
     }
 
+    public MemberEntity selMember(String memId) {
+        String sql = String.format(" SELECT mem_id, mem_name, addr, phone1, phone2, height, debut_date " + " FROM member WHERE mem_id = '%s' ", memId);
+        System.out.println(sql);
+
+        try {
+            Connection conn = myConn.getConn();
+            Statement stat = conn.createStatement();
+            ResultSet rs = stat.executeQuery(sql);
+
+            while ((rs.next())) {
+                MemberEntity entity = new MemberEntity();
+                entity.setMemId(memId);
+                entity.setMemName(rs.getString("mem_name"));
+                entity.setAddr(rs.getString("addr"));
+                entity.setPhone1(rs.getString("phone1"));
+                entity.setPhone2(rs.getString("phone2"));
+                entity.setHeight(rs.getInt("height"));
+                entity.setDebutDate(rs.getString("debut_date"));
+
+                return entity;
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
     public List<MemberEntity> selMemberList() { // 부분이 아닌 전체를 가져오겟다는 뜻
         List<MemberEntity> list = new ArrayList<>();
         String sql = "SELECT mem_id, mem_name, debut_date FROM member ORDER BY debut_date DESC";
@@ -63,12 +93,13 @@ public class MemberDao {
 //        Connection conn = null;
 //        Statement stat = null;
 //        ResultSet rs = null;
-        try {Connection conn = myConn.getConn();
+        try {
+            Connection conn = myConn.getConn();
             Statement stat = conn.createStatement();
             ResultSet rs = stat.executeQuery(sql);
 //            conn = myConn.getConn();
 
-            while (rs.next()){
+            while (rs.next()) {
                 String memId = rs.getString("mem_id");
                 String memName = rs.getString("mem_name");
                 String debutDate = rs.getString("debut_date");
@@ -150,22 +181,26 @@ public class MemberDao {
         }
         return result;
     }
-
-
 }
 
-class SelListMemberTest{
-    public static void main(String[]args){
+//
+class SelMemberTest {
+    public static void main(String[] args) {
         MemberDao dao = new MemberDao();
-        List<MemberEntity>list = dao.selMemberList();
-        for(MemberEntity member : list){
+        MemberEntity entity = dao.selMember("WMN");
+        System.out.println(entity);
+    }
+}
+
+class SelListMemberTest {
+    public static void main(String[] args) {
+        MemberDao dao = new MemberDao();
+        List<MemberEntity> list = dao.selMemberList();
+        for (MemberEntity member : list) {
             System.out.println(member);
         }
     }
 }
-
-
-
 
 
 class delMemberTest {
@@ -181,6 +216,7 @@ class delMemberTest {
     }
 }
 
+
 class MemberDaoUpdateTest {
     public static void main(String[] args) {
         MemberDao memberDao = new MemberDao();
@@ -194,6 +230,7 @@ class MemberDaoUpdateTest {
         System.out.printf("affectedRow : %d\n", affectedRow);
     }
 }
+
 
 class MemberDAOTest {
     public static void main(String[] args) {
