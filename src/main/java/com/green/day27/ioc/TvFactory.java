@@ -3,8 +3,8 @@ package com.green.day27.ioc;
 import com.green.day27.Speaker;
 import com.green.day27.Tv;
 import com.green.day27.Woofer;
-import com.green.day27.nonioc.HanilWoofer;
-import com.green.day27.nonioc.MartenWoofer;
+import com.green.day27.HanilWoofer;
+import com.green.day27.MartenWoofer;
 
 public class TvFactory {
     // SingleTon 패턴, 싱클톤 패턴
